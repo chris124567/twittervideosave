@@ -1,0 +1,9 @@
+{{define "title"}}Error{{end}}
+{{define "path"}}error{{end}}
+
+{{template "base" .}}
+
+{{define "main"}}
+<h1>Error</h1>
+An error was encountered when loading this page.  If you were downloading a video, the video you tried to download may be private or deleted.  Make sure you are using a valid {{template "supported_site" .}} link.  If you are converting to MP3, the file may have been large to convert.  Try visiting the <a href="/">home page</a> and trying again.
+{{end}}

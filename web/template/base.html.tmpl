@@ -1,0 +1,89 @@
+{{define "description"}}{{end}}
+
+{{define "add_head"}}{{end}}
+
+{{define "base"}}
+<!DOCTYPE html>
+<html lang="en" prefix="og: http://ogp.me/ns#">
+<head>
+    <meta charset="utf-8">
+    <meta name="robots" content="noarchive, noimageindex">
+    <meta name="referrer" content="no-referrer">
+    <meta name="format-detection" content="telephone=no, address=no, date=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="true">
+
+    <meta property="og:title" content="{{template "title" .}} - {{template "site_name" .}}">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{template "site_host" .}}/{{template "path" .}}">
+    <meta property="og:image" content="{{template "site_host" .}}/static/img/favicon.png">
+    <meta property="og:description" content="{{template "description" .}}">
+    <meta property="og:site_name" content="{{template "site_name" .}}">
+    <meta name="description" content="{{template "description" .}}">
+
+    <link rel='shortcut icon' type="image/png" href="/static/img/favicon.png">
+    <link type="text/css" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link type="text/css" href="/static/main.min.css" rel="stylesheet">
+    <!-- <title>{{template "title" .}} - {{template "site_name" .}}</title> -->
+    <title>{{template "title" .}} - {{template "site_name" . }}</title>
+    {{template "add_head" .}}
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-165857843-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-165857843-1');
+    </script>
+
+</head>
+
+<body>
+    <div id="page-container">
+        <div id="content-wrap">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="/">{{template "site_name" .}}</a>
+            <div class="collapse navbar-collapse" id="navbarDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/frequently-asked-questions">Frequently Asked Questions</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/how-to">How To</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/ios-shortcut">iOS Shortcut</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div>
+            {{template "main" .}}
+        </div>
+        </div>
+        <div id="footer" class="footer">
+            <footer>
+                <div class="disclaimer">Trademarks property of their respective owners. Copyright © 2020 {{template "site_name" .}}. All Rights Reserved.  {{template "site_name" . }} is not affiliated with {{template "supported_site" .}}.  {{template "site_name" .}} does not host copyrighted content on its servers and all the videos that are downloaded are done directly from {{template "supported_site" .}}'s CDN servers to the respective user's machine.</div>
+                <hr>
+                <a class="navbar_link" href="/terms-of-service">Terms of Service</a>
+                &nbsp;|&nbsp;
+                <a class="navbar_link" href="/privacy-policy">Privacy Policy</a>
+                &nbsp;|&nbsp;
+                <a class="navbar_link" href="/contact">Contact</a>
+            </footer>
+        </div>
+</div>
+
+</body>
+
+</html>
+{{end}}

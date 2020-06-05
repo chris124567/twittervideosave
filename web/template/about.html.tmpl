@@ -1,0 +1,13 @@
+{{define "title"}}About{{end}}
+{{define "path"}}about{{end}}
+{{define "description"}}Learn more about {{template "site_name" .}}.{{end}}
+
+{{template "base" .}}
+
+{{define "main"}}
+<h1>About Our Service</h1>
+{{template "site_name" .}} is a service to download videos from {{template "supported_site" .}}.  We offer a free online tool to download videos and GIFs from {{template "supported_site" .}}.  Since {{template "supported_site" .}} does not officially offer functionality to download videos, our site provides this service.  Simply copy-paste any {{template "supported_site" .}} link containing a video, and this app will conveniently extract the MP4 links from it.  Our site also supports downloading in MP3.  These links will enable you to efficiently save the video to your computer.
+<br>
+<br>
+We are constantly improving {{template "site_name" .}} to improve our users' experiences.  Sometimes, due to technical changes by {{template "supported_site" .}}, we may be unable to provide the video links.  If you have any issues downloading videos with our site, please send them to us via our <a href="/contact">contact page</a>.
+{{end}}

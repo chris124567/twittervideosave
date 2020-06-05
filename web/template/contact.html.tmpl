@@ -1,0 +1,14 @@
+{{define "title"}}Contact{{end}}
+{{define "path"}}contact{{end}}
+{{define "description"}}Contact {{template "site_name" .}}.{{end}}
+
+{{template "base" .}}
+
+{{define "main"}}
+<h1>Contact</h1>
+Email us with any questions, inquiries, or feedback you have regarding your service.  We are usually able to respond within 1 week.  
+<br>
+We can be reached at: <a href="mailto:{{template "contact_email" .}}">{{template "contact_email" .}}</a>
+<br>
+We can also be reached via <a href="https://twitter.com/{{template "twitter_username" .}}">Twitter</a>.
+{{end}}

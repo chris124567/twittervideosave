@@ -1,0 +1,31 @@
+{{define "title"}}How To Download Videos From {{template "supported_site" .}}{{end}}
+{{define "path"}}how-to{{end}}
+{{define "description"}}How to use {{template "site_name" .}} to download videos from {{template "supported_site" .}}.{{end}}
+
+{{template "base" .}}
+
+{{define "main"}}
+<h1>How To Download Videos From {{template "supported_site" .}}</h1>
+Downloading videos from {{template "supported_site" .}} is now easier than ever using our service.  No registration or software is needed, a {{template "supported_site"}} video can easily be downloaded just using a web browser with our site.
+<br>
+<ul style="list-style: none; padding-left: 0;">
+    <li>
+        <b>Main Method</b>:
+        <ol>
+            <li>Visit {{template "supported_site" .}} and find a post containing a video you would like to download.</li>
+            <li>Copy the link of the post from the URL bar of your browser (click it and then right-click->copy or ctrl-c).</li>
+            <li>Visit <a href="/">our home page</a> and paste (using right-click->paste or ctrl-v) the URL into the text box.</li>
+            <li>Click the download button (and wait for a few seconds while our servers gather the video links).</li>
+            <li>Select the quality level you would like and click the corresponding download link.</li>
+        </ol>
+    <li>
+        <b>Alternative Method (Shortcut)</b>:
+        <ol>
+            <li>Visit {{template "supported_site" .}} and find a post containing a video you would like to download.</li>
+            <li>Click on your URL bar and switch the "{{template "supported_site_lower" .}}.com" in it with "<b>ff</b>{{template "supported_site_lower" .}}.com."</li>
+            <li>Press enter to visit the URL.  You will be redirected to the download page for your video on our site.</li>
+            <li>Select the quality level you would like and click the corresponding download link.</li>
+        </ol>
+    </li>
+</ul>
+{{end}}

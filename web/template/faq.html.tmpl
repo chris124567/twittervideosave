@@ -1,0 +1,53 @@
+{{define "title"}}Frequently Asked Questions{{end}}
+{{define "path"}}frequently-asked-questions{{end}}
+{{define "description"}}Frequently asked questions about {{template "site_name" .}}.{{end}}
+
+{{template "base" .}}
+
+{{define "main"}}
+<h1>Frequently Asked Questions about {{template "site_name" .}}</h1>
+<ol>
+    <li>
+        <h4>Is {{template "site_name" .}} safe for my PC?</h4>
+        Yes, {{template "site_name" .}} is very safe.  We are committed to providing a safe and secure service, financed by safe ads provided by Google.
+    </li>
+    <li>
+        <h4>Do I need an account to download videos?</h4>
+        No, an account is not necessary.  Simply click download.
+    </li>
+    <li>
+        <h4>How do I download videos from {{template "supported_site" .}}?</h4>
+        <ol>
+            <li>Paste the link you wish to download into the box on the <a href="/">home page.</a></li>
+            <li>Click the "Download" button next to the form.</li>
+            <li>Find the quality you would like and click the "Download" button next to it.</li>
+        </ol>
+    </li> 
+    <li>
+        <h4>Where are {{template "supported_site" .}} videos saved after being downloaded?</h4>
+        When you're downloading files, they are normally saved into whatever folder your default is set as. Your browser typically sets this folder for you. In the settings of your browser you can change the destination folder for your downloaded {{template "supported_site" .}} videos.
+    </li>
+    <li>
+        <h4>How can I contact {{template "site_name" .}} to give feedback?</h4>
+        Visit our <a href="/contact">contact page</a>.
+    </li>
+    <li>
+        <h4>Why is my video not being downloaded?</h4>
+        If the video is not being properly downloaded, these are the usually the problems:
+        <ul>
+            <li>The link may contain an image rather than a video.</li>
+            <li>The link or the user who uploaded it may be marked as "private."  Our service only works with public videos.</li>
+            <li>The link may be broken.</li>
+        </ul>
+    </li>
+    <li>
+        <h4>How do I download {{template "supported_site" .}} videos on a mobile phone?</h4>
+        Paste the link of the video you want to download into the text box above and then click on the Download button. This will present you with a list on options where you can select your video quality level. Select the video quality preferred by tapping on the Download button next to the quality level.
+    </li>
+    <li>
+        <h4>Is it possible to download videos from {{template "supported_site" .}} without being a registered user?</h4>
+        Yes, our service enables you to download videos from {{template "supported_site" .}} without having an account.
+    </li>
+</ol>
+
+{{end}}

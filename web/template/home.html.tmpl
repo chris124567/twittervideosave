@@ -1,0 +1,62 @@
+{{define "title"}}Twitter Video Downloader{{end}}
+{{define "path"}}{{end}}
+{{define "home_description"}}{{template "site_name" .}} is an online tool to download videos and GIFs from {{template "supported_site" .}}.  Save any video from {{template "supported_site" .}}.  It's free, fast & easy to use.{{end}}
+{{define "description"}}{{template "home_description" .}}{{end}}
+
+{{template "base" .}}
+
+{{define "add_head"}}
+<meta name="keywords" content="{{template "supported_site_lower" .}} video downloader,save {{template "supported_site_lower" .}} videos,{{template "supported_site_lower" .}} to mp4,{{template "supported_site_lower" .}} to mp3,download {{template "supported_site_lower" .}} videos,{{template "supported_site_lower" .}} download video,download gif from {{template "supported_site_lower" .}},{{template "supported_site_lower" .}} video saver,download gif {{template "supported_site_lower" .}}">
+{{end}}
+
+{{define "main"}}
+<div class="jumbotron custom-jum no-mrg">
+<div class="container">
+<div class="row">
+<div class="col-md-12">
+<div class="center">
+<div class="home-search">
+<h1>{{template "supported_site" .}} Video Downloader</h1>
+<h2>Save {{template "supported_site" .}} videos to MP4 and MP3</h2>
+</div>
+<div class="form-home">
+<form action="/video" method="GET" id="form_download">
+<div class="input-group col-lg-10 col-md-10 col-sm-10">
+<input id="url" name="url" class="form-control input-md ht58" placeholder="Enter {{template "supported_site" .}} URL ..." type="text" required value="">
+<span class="input-group-btn"><button class="btn btn-primary input-md btn-download ht58" type="submit" id="btn_submit">Download</button></span>
+</div>
+</form>
+<br>
+<div>
+<a rel="noopener" class="btn btn-secondary facebook-color" href="https://www.facebook.com/sharer/sharer.php?u={{template "site_domain" .}}" target="_blank">Share to Facebook</a>
+<a rel="noopener" class="btn btn-secondary twitter-color" href="https://twitter.com/intent/tweet?text=Download%20{{template "supported_site" .}}%20videos%20in%20MP4%20and%20MP3%20using%20{{template "site_host" .}}" target="_blank">Share to Twitter</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="page-content">
+<div class="container">
+<div class="row">
+<div class="col-lg-8 col-md-8">
+<div class="wrap-txt">
+<h3>
+<strong>{{template "site_name". }}</strong></h3>
+<p>{{template "site_name" .}} is a free service to download videos from {{template "supported_site" .}}.  We support videos in MP4 and GIF format.  Our site also works with both mobile and desktop links.</p>
+<p>Our website works for computers, phones, tablets, and other devices.  Our service is easy-to-use, available in multiple languages, and does not require any registration. {{template "site_name" .}} is exactly what you need.</p>
+</div>
+<p><b>New Shortcut</b>: Switch "{{template "supported_site_lower" .}}.com" with "<b>ff</b>{{template "supported_site_lower" .}}.com" in any Twitter URL and you will be instantly redirected to the downloads page on our site!</p>
+<h3>
+<strong>How to download videos from Twitter?</strong></h3>
+<ul class="lists-home">
+<li class="lists-home">1. Paste the link of the video you want to download.</li>
+<li class="lists-home">2. Click the "Download" button to begin the downloading process.</li>
+<li class="lists-home">3. Select the quality and format (mp4/mp3) you want.  Then, click the "Download" button next to it.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+{{end}}

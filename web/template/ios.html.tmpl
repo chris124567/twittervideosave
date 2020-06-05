@@ -1,0 +1,21 @@
+{{define "title"}}iOS Shortcut{{end}}
+{{define "path"}}ios-shortcut{{end}}
+{{define "description"}}Learn how to setup our convenient iOS shortcut to download {{template "site_name" .}} videos.{{end}}
+
+{{template "base" .}}
+
+{{define "main"}}
+<h1>Setting up the {{template "site_name" .}} iOS shortcut to download videos from {{template "supported_site" .}}</h1>
+<ol>
+    <li>First, ensure you are using iOS 12 or above as lower versions do not support shortcuts.</li>
+    <li>Find the shortcuts app on your phone and open it.</li>
+    <li>Then, press the create shortcut button.</li>
+    <li>Follow the instructions in the following video:
+        <br>
+        <video height="482" width="864" controls>
+            <source src="/static/img/iostutorial.mp4" type="video/mp4">
+        </video>
+    </li>
+    <li>Your new shortcut will now show up in the share menu of Safari and the {{template "supported_site" .}} app.  Simply tap it to be taken to the download page for the video.</li>
+</ol>
+{{end}}

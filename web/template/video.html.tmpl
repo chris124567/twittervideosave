@@ -1,0 +1,52 @@
+{{define "title"}}Download from {{.Source}}{{end}}
+{{define "path"}}video{{end}}
+{{define "description"}}Download video from {{.Source}}{{end}}
+
+{{define "add_head"}}
+<script src="https://www.dropbox.com/static/api/2/dropins.js" id="dropboxjs" data-app-key="tk4pvy25kc2l078"></script>
+{{end}}
+
+{{template "base" .}}
+
+{{define "main"}}
+<div style="line-height: 50%">
+    <br>
+</div>
+{{if eq (len .Links) 0}}
+<h1 class="ellipsis">No download links found for <a rel="noopener" href="{{.OriginalUrl}}" target="_blank">{{.OriginalUrl}}</a></h1>
+<h3>Make sure the video is not private or deleted!</h3>
+{{else}}
+<h1 class="ellipsis">Download(s) for <a rel="noopener" href="{{.OriginalUrl}}" target="_blank">{{.OriginalUrl}}</a></h1>
+<h4 class="ellipsis">Title: {{.Title}}</h4>
+<div class="table-responsive">
+<table class="table table-bordered"> 
+<thead>
+<tr>
+<th>Quality</th>
+<th>Format</th>
+<th>Downloads</th> 
+</tr>
+</thead>
+{{range $i, $link := .Links}}
+<tr>
+    <td>{{$link.Quality}}</td>
+    <td>mp4</td>
+    <td><a href="{{$link.Url}}" class="btn btn-primary">Download</a></td>
+</tr>
+{{end}}
+{{if .Mp3Support}}
+<tr>
+    <td>Standard Audio</td>
+    <td>mp3</td>
+    <td><a href="/getmp3?url={{(index .Links 0).Url}}" class="btn btn-primary">Download</a></td>
+</tr>
+{{end}}
+</table>
+</div>
+<div>
+<a rel="noopener" class="btn btn-secondary facebook-color" href="https://www.facebook.com/sharer/sharer.php?u={{template "site_domain" .}}" target="_blank">Share to Facebook</a>
+<a rel="noopener" class="btn btn-secondary twitter-color" href="https://twitter.com/intent/tweet?text=Download%20{{template "supported_site" .}}%20videos%20in%20MP4%20and%20MP3%20using%20{{template "site_host" .}}" target="_blank">Share to Twitter</a>
+<a class="dropbox-saver" href="{{(index .Links 0).Url}}"></a>
+</div>
+{{end}}
+{{end}}
